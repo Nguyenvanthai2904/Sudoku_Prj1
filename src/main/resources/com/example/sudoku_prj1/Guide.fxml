@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #36399a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku_prj1.Guide">
+   <children>
+      <Label layoutX="260.0" layoutY="77.0" text="Hướng dẫn" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="120.0" layoutY="143.0" prefHeight="407.0" prefWidth="409.0" style="-fx-background-color: white;" text="&#10;Mục tiêu: &#10;   Điền các số từ 1 đến 9 vào bảng 9x9&#10;   sao cho: &#10;&#9;Mỗi hàng ngang không lặp số. &#10;&#9;Mỗi cột dọc không lặp số. &#10;&#9;Mỗi vùng 3x3 không lặp số. &#10;&#10;Số cho sẵn: &#10;&#9;Một số ô đã được điền trước,&#10;        không thể thay đổi.  &#10;&#10;Kết thúc: &#10;        Trò chơi hoàn thành khi tất &#10;        cả ô được điền kín và&#10;        thỏa mãn các quy tắc trên.">
+         <font>
+            <Font name="JetBrains Mono ExtraLight" size="17.0" />
+         </font>
+      </TextArea>
+      <ImageView fx:id="img_back" fitHeight="52.0" fitWidth="52.0" layoutX="33.0" layoutY="43.0" onDragDetected="#onBackImgClick" onMouseClicked="#onBackImgClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_14.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

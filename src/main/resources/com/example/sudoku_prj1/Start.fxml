@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #36399a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku_prj1.Main">
+   <children>
+      <Button fx:id="btn_batdauchoi" layoutX="247.0" layoutY="222.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Bắt đầu chơi" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_kyluc" layoutX="247.0" layoutY="279.0" mnemonicParsing="false" onAction="#onRecordButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Kỷ lục" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="336.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Hướng dẫn" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="306.0" fitWidth="543.0" layoutX="113.0" layoutY="349.0" pickOnBounds="false" preserveRatio="true" rotate="-14.0">
+         <image>
+            <Image url="@img_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="501.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" rotate="112.9">
+         <image>
+            <Image url="@img_3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="56.0" layoutX="563.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" rotate="24.0">
+         <image>
+            <Image url="@img_3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="85.0" layoutX="448.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" rotate="-28.3">
+         <image>
+            <Image url="@img_3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="84.0" layoutX="137.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true" rotate="32.5">
+         <image>
+            <Image url="@img_6.png" />
+         </image>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="122.0" layoutX="37.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
+         <image>
+            <Image url="@img_7.png" />
+         </image>
+         <effect>
+            <Bloom threshold="0.19" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="136.0" fitWidth="113.0" layoutX="491.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" rotate="-30.3">
+         <image>
+            <Image url="@img_8.png" />
+         </image>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="img_logo" fitHeight="219.0" fitWidth="359.0" layoutX="91.0" layoutY="87.0" pickOnBounds="false" preserveRatio="true">
+         <image>
+            <Image url="@img_9.png" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.25" height="255.0" radius="127.0" width="255.0">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="137.0" fitWidth="31.0" layoutX="548.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" rotate="23.2">
+         <image>
+            <Image url="@img_5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="137.0" fitWidth="31.0" layoutX="533.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_5.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
