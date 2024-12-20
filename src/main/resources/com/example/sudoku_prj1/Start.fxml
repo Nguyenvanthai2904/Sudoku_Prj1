@@ -11,22 +11,17 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #36399a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku_prj1.Main">
    <children>
-      <Button fx:id="btn_batdauchoi" layoutX="247.0" layoutY="222.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Bắt đầu chơi" textFill="WHITE">
+      <Button fx:id="btn_batdauchoi" layoutX="247.0" layoutY="230.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Bắt đầu chơi" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn_kyluc" layoutX="247.0" layoutY="279.0" mnemonicParsing="false" onAction="#onRecordButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Kỷ lục" textFill="WHITE">
+      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="300.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Hướng dẫn" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="336.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Hướng dẫn" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono ExtraBold" size="16.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="306.0" fitWidth="543.0" layoutX="113.0" layoutY="349.0" pickOnBounds="false" preserveRatio="true" rotate="-14.0">
+      <ImageView fitHeight="331.0" fitWidth="448.0" layoutX="107.0" layoutY="325.0" pickOnBounds="false" preserveRatio="true" rotate="-14.0">
          <image>
             <Image url="@img_1.png" />
          </image>
@@ -54,7 +49,7 @@
             <Bloom threshold="0.0" />
          </effect>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="122.0" layoutX="37.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
+      <ImageView fitHeight="64.0" fitWidth="122.0" layoutX="45.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
          <image>
             <Image url="@img_7.png" />
          </image>
@@ -70,7 +65,7 @@
             <Bloom threshold="0.0" />
          </effect>
       </ImageView>
-      <ImageView fx:id="img_logo" fitHeight="219.0" fitWidth="359.0" layoutX="91.0" layoutY="87.0" pickOnBounds="false" preserveRatio="true">
+      <ImageView fx:id="img_logo" fitHeight="219.0" fitWidth="359.0" layoutX="96.0" layoutY="87.0" pickOnBounds="false" preserveRatio="true">
          <image>
             <Image url="@img_9.png" />
          </image>

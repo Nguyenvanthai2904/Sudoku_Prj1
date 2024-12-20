@@ -1,0 +1,52 @@
+/* Style cho ComboBox chính */
+.combo-box {
+    -fx-background-color: transparent; /* Nền trong suốt */
+    -fx-border-color: transparent; /* Viền trong suốt */
+    -fx-text-fill: white; /* Màu chữ mặc định (khi chưa chọn) là trắng */
+    -fx-font-family: "JetBrains Mono Medium";
+    -fx-font-size: 15px;
+}
+
+/* Style cho phần hiển thị giá trị đang chọn (text field area) */
+.combo-box .text-field {
+    -fx-text-fill: white;
+}
+
+/* Style cho nút mũi tên (phần bao ngoài) */
+.combo-box .arrow,
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Nền mũi tên trong suốt */
+}
+
+/* Style cho danh sách item khi popup */
+.combo-box-popup .list-view {
+    -fx-background-color: transparent; /* Nền danh sách trong suốt */
+    -fx-border-color: transparent; /* Ẩn viền */
+}
+
+/* Style cho từng item trong danh sách */
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: transparent; /* Nền item trong suốt */
+    -fx-text-fill: white; /* Màu chữ trắng */
+    -fx-padding: 5px 10px; /* Thêm padding cho dễ nhìn */
+}
+
+/* Style cho item khi được hover */
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Hiệu ứng hover nhẹ (hơi sáng lên một chút) */
+}
+
+/* Style cho item khi được chọn (trong danh sách) */
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.2); /* Hiệu ứng selected (sáng hơn hover) */
+}
+
+/* Style cho ComboBox khi item được chọn và hiển thị lên trên */
+.combo-box .text-field {
+    -fx-text-fill: white; /* Màu chữ trắng */
+}
+
+/* Sửa lỗi selected item bị màu đen và giá trị setValue ban đầu màu đen */
+.combo-box-base, .combo-box .text-field, .combo-box .list-cell:filled:selected {
+    -fx-text-fill: white;
+}

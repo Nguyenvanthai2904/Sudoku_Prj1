@@ -2,6 +2,7 @@ package com.example.sudoku_prj1;
 
 import java.util.Random;
 
+
 public class SudokuGenerator {
     private int[][] board;
     private Random random;
@@ -11,17 +12,72 @@ public class SudokuGenerator {
         random = new Random();
     }
 
+
     public int[][] generate(int difficulty) {
-        fillBoard();
+        fillBoardRandomly(); //Fill board with random numbers
         removeNumbers(difficulty);
         return board;
     }
 
-    private void fillBoard() {
-        Sudoku sudoku = new Sudoku();
-        sudoku.solve();
-        board = sudoku.getBoard();
+    private void fillBoardRandomly() {
+        fillBoardHelper(0, 0);
     }
+
+    private boolean fillBoardHelper(int row, int col) {
+        if (row == 9) {
+            return true; // Board is full
+        }
+
+        int nextRow = (col == 8) ? row + 1 : row;
+        int nextCol = (col == 8) ? 0 : col + 1;
+
+        if (board[row][col] != 0) {
+            return fillBoardHelper(nextRow, nextCol); // Cell already filled
+        }
+        // Randomly choose and test values from 1-9
+        int[] numbers = {1,2,3,4,5,6,7,8,9};
+        shuffleArray(numbers);
+
+        for(int num: numbers){
+            if (isValid(row, col, num)) {
+                board[row][col] = num;
+                if (fillBoardHelper(nextRow, nextCol)) {
+                    return true;
+                }
+                board[row][col] = 0; // Backtrack if this number does not lead to a solution
+            }
+
+        }
+        return false; //No valid num, backtrack
+    }
+
+    private void shuffleArray(int[] array) {
+        for (int i = array.length - 1; i > 0; i--) {
+            int index = random.nextInt(i + 1);
+            int temp = array[index];
+            array[index] = array[i];
+            array[i] = temp;
+        }
+    }
+
+    private boolean isValid(int row, int col, int num) {
+        for (int i = 0; i < 9; i++) {
+            if (board[row][i] == num || board[i][col] == num) {
+                return false;
+            }
+        }
+        int startRow = row - row % 3;
+        int startCol = col - col % 3;
+        for (int i = startRow; i < startRow + 3; i++) {
+            for (int j = startCol; j < startCol + 3; j++) {
+                if (board[i][j] == num) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
 
     private void removeNumbers(int difficulty) {
         int cellsToRemove = difficulty;
@@ -36,4 +92,3 @@ public class SudokuGenerator {
         }
     }
 }
-

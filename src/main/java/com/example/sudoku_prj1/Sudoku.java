@@ -9,18 +9,18 @@ public class Sudoku {
         board = new int[9][9];
     }
 
-    public Sudoku(int[][] board) {
-        this.board = new int[9][9];
-        for (int i = 0; i < 9; i++) {
-            System.arraycopy(board[i], 0, this.board[i], 0, 9);
-        }
-    }
-
-    public void newGame(int[][] generatedBoard) {
-        for (int i = 0; i < 9; i++) {
-            System.arraycopy(generatedBoard[i], 0, this.board[i], 0, 9);
-        }
-    }
+//    public Sudoku(int[][] board) {
+//        this.board = new int[9][9];
+//        for (int i = 0; i < 9; i++) {
+//            System.arraycopy(board[i], 0, this.board[i], 0, 9);
+//        }
+//    }
+//
+//    public void newGame(int[][] generatedBoard) {
+//        for (int i = 0; i < 9; i++) {
+//            System.arraycopy(generatedBoard[i], 0, this.board[i], 0, 9);
+//        }
+//    }
 
     public int[][] getBoard() {
         return board;
