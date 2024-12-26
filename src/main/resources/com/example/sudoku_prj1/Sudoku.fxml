@@ -372,7 +372,7 @@
             <Font name="JetBrains Mono Medium" size="18.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cb_difficulty" layoutX="260.0" layoutY="562.0" onAction="#select" prefHeight="36.0" prefWidth="130.0" visibleRowCount="3" />
+      <ComboBox fx:id="cb_difficulty" layoutX="260.0" layoutY="562.0"  prefHeight="36.0" prefWidth="130.0" visibleRowCount="3" />
       <ImageView fx:id="img_check" fitHeight="29.0" fitWidth="36.0" layoutX="435.0" layoutY="563.0" onMouseClicked="#onCheckImgClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img_12.png" />

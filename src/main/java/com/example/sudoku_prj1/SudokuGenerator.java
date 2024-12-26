@@ -14,41 +14,40 @@ public class SudokuGenerator {
 
 
     public int[][] generate(int difficulty) {
-        fillBoardRandomly(); //Fill board with random numbers
+        fillBoardRandom(0, 0);
         removeNumbers(difficulty);
         return board;
     }
 
-    private void fillBoardRandomly() {
-        fillBoardHelper(0, 0);
-    }
 
-    private boolean fillBoardHelper(int row, int col) {
+
+
+
+    private boolean fillBoardRandom(int row, int col) {
         if (row == 9) {
-            return true; // Board is full
+            return true;
         }
 
         int nextRow = (col == 8) ? row + 1 : row;
         int nextCol = (col == 8) ? 0 : col + 1;
 
         if (board[row][col] != 0) {
-            return fillBoardHelper(nextRow, nextCol); // Cell already filled
+            return fillBoardRandom(nextRow, nextCol);
         }
-        // Randomly choose and test values from 1-9
+
         int[] numbers = {1,2,3,4,5,6,7,8,9};
         shuffleArray(numbers);
 
         for(int num: numbers){
             if (isValid(row, col, num)) {
                 board[row][col] = num;
-                if (fillBoardHelper(nextRow, nextCol)) {
+                if (fillBoardRandom(nextRow, nextCol)) {
                     return true;
                 }
-                board[row][col] = 0; // Backtrack if this number does not lead to a solution
+                board[row][col] = 0;
             }
-
         }
-        return false; //No valid num, backtrack
+        return false;
     }
 
     private void shuffleArray(int[] array) {
@@ -80,14 +79,14 @@ public class SudokuGenerator {
 
 
     private void removeNumbers(int difficulty) {
-        int cellsToRemove = difficulty;
-        while (cellsToRemove > 0) {
+        int remove = difficulty;
+        while (remove > 0) {
             int row = random.nextInt(9);
             int col = random.nextInt(9);
 
             if (board[row][col] != 0) {
                 board[row][col] = 0;
-                cellsToRemove--;
+                remove--;
             }
         }
     }

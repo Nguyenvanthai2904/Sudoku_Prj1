@@ -37,7 +37,7 @@ public class SudokuController {
         // Ánh xạ các TextField
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
-                String id = "tf" + row + col; // Tạo id giống như trong FXML
+                String id = "tf" + row + col;
                 TextField textField = (TextField) gridPane.lookup("#" + id);
                 if (textField != null) {
                     textFieldMap.put(id, textField);
@@ -52,9 +52,9 @@ public class SudokuController {
         startNewGame();
     }
 
-    public TextField getTextField(int row, int col) {
-        return textFieldMap.get("tf" + row + col);
-    }
+//    public TextField getTextField(int row, int col) {
+//        return textFieldMap.get("tf" + row + col);
+//    }
 
 
     public void onBackImgClick(MouseEvent mouseEvent) {
@@ -96,16 +96,14 @@ public class SudokuController {
                     try {
                         board[row][col] = Integer.parseInt(text);
                     }catch (NumberFormatException e){
-                        board[row][col] = 0; // if text input is not an integer
+                        board[row][col] = 0;
                     }
-
                 }
             }
         }
     }
 
     public void onSolveImgClick(MouseEvent mouseEvent) {
-
         sudoku.solve();
         updateTextFieldsFromBoard();
     }
@@ -131,11 +129,11 @@ public class SudokuController {
         String selectedDifficulty = cb_difficulty.getValue();
         switch (selectedDifficulty) {
             case "Medium":
-                return 40; // Medium difficulty value
+                return 40;
             case "Hard":
-                return 50; // Hard difficulty value
+                return 50;
             default:
-                return 30; // Easy difficulty value
+                return 30;
         }
     }
 
@@ -161,8 +159,6 @@ public class SudokuController {
         alert.setTitle(title);
         alert.setContentText(content);
         alert.showAndWait();
-    }
-    public void select(ActionEvent actionEvent) {
     }
 
 }

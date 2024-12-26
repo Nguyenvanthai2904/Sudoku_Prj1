@@ -22,8 +22,6 @@ public class Main extends Application {
     }
 
 
-
-
     public static void main(String[] args) {
         launch();
     }
@@ -49,7 +47,7 @@ public class Main extends Application {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Guide.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 650, 650);
             Stage stage = new Stage();
-            stage.setTitle("Guide");
+            stage.setTitle("Hướng dẫn");
             stage.setScene(scene);
             stage.show();
             stage.setResizable(false);
@@ -60,20 +58,20 @@ public class Main extends Application {
         }
     }
 
-    public void onRecordButtonClick(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Record.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 650, 650);
-            Stage stage = new Stage();
-            stage.setTitle("Record");
-            stage.setScene(scene);
-            stage.show();
-            stage.setResizable(false);
-            Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            currentStage.close();
-        }
-        catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    public void onRecordButtonClick(ActionEvent actionEvent) {
+//        try {
+//            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Record.fxml"));
+//            Scene scene = new Scene(fxmlLoader.load(), 650, 650);
+//            Stage stage = new Stage();
+//            stage.setTitle("Record");
+//            stage.setScene(scene);
+//            stage.show();
+//            stage.setResizable(false);
+//            Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+//            currentStage.close();
+//        }
+//        catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 }
