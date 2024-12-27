@@ -30,17 +30,17 @@
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lb_easy" contentDisplay="CENTER" layoutX="297.0" layoutY="160.0" prefHeight="32.0" prefWidth="57.0" textFill="WHITE">
+      <Label fx:id="lb_easy" contentDisplay="CENTER" layoutX="297.0" layoutY="160.0" prefHeight="32.0" prefWidth="57.0" text="00:00" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lb_medium" contentDisplay="CENTER" layoutX="297.0" layoutY="207.0" prefHeight="32.0" prefWidth="57.0" textFill="WHITE">
+      <Label fx:id="lb_medium" contentDisplay="CENTER" layoutX="297.0" layoutY="207.0" prefHeight="32.0" prefWidth="57.0" text="00:00" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lb_hard" contentDisplay="CENTER" layoutX="297.0" layoutY="254.0" prefHeight="32.0" prefWidth="57.0" textFill="WHITE">
+      <Label fx:id="lb_hard" contentDisplay="CENTER" layoutX="297.0" layoutY="254.0" prefHeight="32.0" prefWidth="57.0" text="00:00" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>

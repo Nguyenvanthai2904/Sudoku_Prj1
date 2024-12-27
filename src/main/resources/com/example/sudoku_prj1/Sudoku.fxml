@@ -393,15 +393,15 @@
             <Image url="@img_14.png" />
          </image>
       </ImageView>
-      <Label layoutX="199.0" layoutY="43.0" text="Sudoku" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono ExtraBold" size="62.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="70.0" fitWidth="62.0" layoutX="433.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="46.0" layoutX="427.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img_16.png" />
+            <Image url="@img_15.png" />
          </image>
       </ImageView>
+      <Label fx:id="lb_time" contentDisplay="CENTER" layoutX="263.0" layoutY="47.0" prefHeight="76.0" prefWidth="130.0" text="00:00" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Medium" size="40.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

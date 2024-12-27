@@ -1,6 +1,7 @@
 package com.example.sudoku_prj1;
 
 
+import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -24,9 +26,17 @@ public class SudokuController {
     @FXML
     private ComboBox<String> cb_difficulty;
 
+    @FXML
+    private Label lb_time;
+
     private final Map<String, TextField> textFieldMap = new HashMap<>();
     private Sudoku sudoku;
     private int[][] initialBoard;
+    private AnimationTimer time;
+    private long startTime;
+    private boolean timeRun;
+
+
 
 
     @FXML
@@ -44,17 +54,63 @@ public class SudokuController {
                 }
             }
         }
+        initTimer();
         startNewGame();
+
         cb_difficulty.setOnAction(this::onDifficultySelected);
     }
+
+    private void initTimer(){
+        time = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                if (timeRun) {
+                    long elapsedSeconds = (now - startTime) / 1_000_000_000;
+                    long minutes = elapsedSeconds / 60;
+                    long seconds = elapsedSeconds % 60;
+                    lb_time.setText(String.format("%02d:%02d", minutes, seconds));
+                }
+            }
+        };
+    }
+
 
     private void onDifficultySelected(ActionEvent actionEvent){
         startNewGame();
     }
 
-//    public TextField getTextField(int row, int col) {
-//        return textFieldMap.get("tf" + row + col);
-//    }
+    private void startTime() {
+        startTime = System.nanoTime();
+        timeRun = true;
+        time.start();
+    }
+
+    private void stopTime() {
+        if (time != null){
+            timeRun = false;
+            time.stop();
+        }
+    }
+
+    private void resetTime() {
+        stopTime();
+        lb_time.setText("00:00");
+    }
+
+    public void continueTime(long minutes_pause, long seconds_pause) {
+        time = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                if (timeRun) {
+                    long elapsedSeconds = (now - startTime) / 1_000_000_000;
+                    long minutes = minutes_pause + elapsedSeconds / 60;
+                    long seconds = seconds_pause + elapsedSeconds % 60;
+                    lb_time.setText(String.format("%02d:%02d", minutes, seconds));
+                }
+            }
+        };
+        startTime();
+    }
 
 
     public void onBackImgClick(MouseEvent mouseEvent) {
@@ -77,9 +133,16 @@ public class SudokuController {
 
         loadInputToBoard();
         if (sudoku.checkResult()) {
-            showAlert("Congratulations", "Sudoku is correct!");
+            stopTime();
+            showAlert("Congratulations", "Sudoku is correct! Your time: " + lb_time.getText());
+
         } else {
+            stopTime();
             showAlert("Hmm!!!", "Sudoku is incorrect, try again.");
+            String[] tmp = lb_time.getText().split(":");
+            long minutes_pause = Integer.parseInt(tmp[0]); // Lấy  phút
+            long seconds_pause = Integer.parseInt(tmp[1]); // Lấy  giây
+            continueTime(minutes_pause, seconds_pause);
         }
     }
 
@@ -105,6 +168,7 @@ public class SudokuController {
 
     public void onSolveImgClick(MouseEvent mouseEvent) {
         sudoku.solve();
+        stopTime();
         updateTextFieldsFromBoard();
     }
 
@@ -123,15 +187,17 @@ public class SudokuController {
             System.arraycopy(initialBoard[i], 0, sudoku.getBoard()[i], 0, 9);
         }
         updateTextFieldsFromBoard();
+        resetTime();
+        startTime();
     }
 
     private int getDifficultyLevel() {
         String selectedDifficulty = cb_difficulty.getValue();
         switch (selectedDifficulty) {
             case "Medium":
-                return 40;
+                return 45;
             case "Hard":
-                return 50;
+                return 60;
             default:
                 return 30;
         }
