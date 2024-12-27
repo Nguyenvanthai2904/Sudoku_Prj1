@@ -16,12 +16,12 @@
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="300.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Hướng dẫn" textFill="WHITE">
+      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="350.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Hướng dẫn" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
       </Button>
-      <ImageView fitHeight="331.0" fitWidth="448.0" layoutX="107.0" layoutY="325.0" pickOnBounds="false" preserveRatio="true" rotate="-14.0">
+      <ImageView fitHeight="249.0" fitWidth="397.0" layoutX="150.0" layoutY="371.0" pickOnBounds="false" preserveRatio="true" rotate="-14.0">
          <image>
             <Image url="@img_1.png" />
          </image>
@@ -87,5 +87,10 @@
             <Image url="@img_5.png" />
          </image>
       </ImageView>
+      <Button fx:id="btn_kyluc" layoutX="247.0" layoutY="290.0" mnemonicParsing="false" onAction="#onRecordButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Kỷ lục" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

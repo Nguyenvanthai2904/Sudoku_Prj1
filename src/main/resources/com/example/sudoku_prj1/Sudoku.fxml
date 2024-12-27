@@ -14,7 +14,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #36399a;" stylesheets="@combobox_custom.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku_prj1.SudokuController">
    <children>
-      <GridPane fx:id="gridPane" alignment="CENTER" layoutX="120.0" layoutY="143.0" prefHeight="407.0" prefWidth="409.0" snapToPixel="false" style="-fx-border-width: 1; -fx-border-radius: 25; -fx-border-color: white;">
+      <GridPane fx:id="gridPane" alignment="CENTER" layoutX="120.0" layoutY="140.0" prefHeight="409.0" prefWidth="415.0" snapToPixel="false" style="-fx-border-width: 1; -fx-border-radius: 25; -fx-border-color: white;">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -27,18 +27,18 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="45.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="45.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="NEVER" />
         </rowConstraints>
          <children>
-            <TextField fx:id="tf12" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="tf12" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -54,11 +54,11 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf06" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6">
+            <TextField fx:id="tf06" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf05" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5">
+            <TextField fx:id="tf05" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -66,11 +66,11 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf03" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3">
+            <TextField fx:id="tf03" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf02" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2">
+            <TextField fx:id="tf02" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -78,7 +78,7 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf13" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <TextField fx:id="tf13" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -94,11 +94,11 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf15" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <TextField fx:id="tf15" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf16" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <TextField fx:id="tf16" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -110,75 +110,75 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf20" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="2">
+            <TextField fx:id="tf20" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf21" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="tf21" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf22" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <TextField fx:id="tf22" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf23" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <TextField fx:id="tf23" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf24" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <TextField fx:id="tf24" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf25" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <TextField fx:id="tf25" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf26" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <TextField fx:id="tf26" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf27" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="2">
+            <TextField fx:id="tf27" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf28" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="2">
+            <TextField fx:id="tf28" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="2">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf30" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="3">
+            <TextField fx:id="tf30" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf31" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="tf31" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf32" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <TextField fx:id="tf32" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf33" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <TextField fx:id="tf33" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf34" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <TextField fx:id="tf34" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf35" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <TextField fx:id="tf35" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf36" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <TextField fx:id="tf36" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf37" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+            <TextField fx:id="tf37" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf38" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="3">
+            <TextField fx:id="tf38" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="3">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -190,11 +190,11 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf42" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <TextField fx:id="tf42" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf43" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <TextField fx:id="tf43" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -202,11 +202,11 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf45" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <TextField fx:id="tf45" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf46" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+            <TextField fx:id="tf46" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="4">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -218,15 +218,15 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf50" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="5">
+            <TextField fx:id="tf50" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf51" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <TextField fx:id="tf51" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf60" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="6">
+            <TextField fx:id="tf60" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -238,7 +238,7 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf61" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <TextField fx:id="tf61" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -250,43 +250,43 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf52" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <TextField fx:id="tf52" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf62" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <TextField fx:id="tf62" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf53" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <TextField fx:id="tf53" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf54" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <TextField fx:id="tf54" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf63" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+            <TextField fx:id="tf63" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf72" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <TextField fx:id="tf72" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf73" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="7">
+            <TextField fx:id="tf73" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="7">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf82" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <TextField fx:id="tf82" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf83" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="8">
+            <TextField fx:id="tf83" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="3" GridPane.rowIndex="8">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf64" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <TextField fx:id="tf64" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="4" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -298,43 +298,43 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf55" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+            <TextField fx:id="tf55" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf56" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+            <TextField fx:id="tf56" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf57" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="5">
+            <TextField fx:id="tf57" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf58" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="5">
+            <TextField fx:id="tf58" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.7 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="5">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf65" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+            <TextField fx:id="tf65" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf66" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+            <TextField fx:id="tf66" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf67" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="6">
+            <TextField fx:id="tf67" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="7" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf68" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="6">
+            <TextField fx:id="tf68" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.7 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="8" GridPane.rowIndex="6">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf75" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="7">
+            <TextField fx:id="tf75" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="7">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf76" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="7">
+            <TextField fx:id="tf76" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="7">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -346,11 +346,11 @@
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf85" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="8">
+            <TextField fx:id="tf85" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 1.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="5" GridPane.rowIndex="8">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
-            <TextField fx:id="tf86" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 0.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="8">
+            <TextField fx:id="tf86" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: white; -fx-border-width: 0.1 0.2 0.1 1.2; -fx-border-color: #aeaeeb; -fx-text-fill: black; -fx-prompt-text-fill: white; -fx-background-radius: 0;" GridPane.columnIndex="6" GridPane.rowIndex="8">
                <font>
                   <Font name="JetBrains Mono ExtraLight" size="17.0" />
                </font></TextField>
@@ -372,7 +372,7 @@
             <Font name="JetBrains Mono Medium" size="18.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cb_difficulty" layoutX="260.0" layoutY="562.0"  prefHeight="36.0" prefWidth="130.0" visibleRowCount="3" />
+      <ComboBox fx:id="cb_difficulty" layoutX="260.0" layoutY="562.0" prefHeight="36.0" prefWidth="130.0" visibleRowCount="3" />
       <ImageView fx:id="img_check" fitHeight="29.0" fitWidth="36.0" layoutX="435.0" layoutY="563.0" onMouseClicked="#onCheckImgClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img_12.png" />
