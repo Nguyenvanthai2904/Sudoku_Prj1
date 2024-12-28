@@ -10,37 +10,22 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #36399a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku_prj1.Record">
    <children>
-      <Label layoutX="172.0" layoutY="160.0" prefHeight="32.0" prefWidth="72.0" text="Easy:" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono Medium" size="17.0" />
-         </font>
-      </Label>
       <Label layoutX="260.0" layoutY="77.0" text="Kỷ lục" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="172.0" layoutY="207.0" prefHeight="32.0" prefWidth="98.0" text="Medium:" textFill="WHITE">
+      <Label fx:id="lb_easy" contentDisplay="CENTER" layoutX="230.0" layoutY="160.0" prefHeight="32.0" prefWidth="150.0" text="00:00" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="172.0" layoutY="254.0" prefHeight="32.0" prefWidth="72.0" text="Hard:" textFill="WHITE">
+      <Label fx:id="lb_medium" contentDisplay="CENTER" layoutX="230.0" layoutY="210.0" prefHeight="32.0" prefWidth="150.0" text="00:00" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lb_easy" contentDisplay="CENTER" layoutX="297.0" layoutY="160.0" prefHeight="32.0" prefWidth="57.0" text="00:00" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono Medium" size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="lb_medium" contentDisplay="CENTER" layoutX="297.0" layoutY="207.0" prefHeight="32.0" prefWidth="57.0" text="00:00" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono Medium" size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="lb_hard" contentDisplay="CENTER" layoutX="297.0" layoutY="254.0" prefHeight="32.0" prefWidth="57.0" text="00:00" textFill="WHITE">
+      <Label fx:id="lb_hard" contentDisplay="CENTER" layoutX="230.0" layoutY="260.0" prefHeight="32.0" prefWidth="150.0" text="00:00" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono Medium" size="17.0" />
          </font>

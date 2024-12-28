@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,9 +36,12 @@ public class SudokuController {
     private AnimationTimer time;
     private long startTime;
     private boolean timeRun;
+    private Record recordController;
 
 
-
+    public void setRecordController(Record controller) {
+        this.recordController = controller;
+    }
 
     @FXML
     public void initialize() {
@@ -58,6 +62,14 @@ public class SudokuController {
         startNewGame();
 
         cb_difficulty.setOnAction(this::onDifficultySelected);
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Record.fxml"));
+            loader.load(); // Load the FXML to ensure the controller is created
+            recordController = loader.getController();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initTimer(){
@@ -136,6 +148,12 @@ public class SudokuController {
             stopTime();
             showAlert("Congratulations", "Sudoku is correct! Your time: " + lb_time.getText());
 
+            if (recordController != null) {
+                String difficulty = cb_difficulty.getValue();
+                String currentTime = lb_time.getText();
+                recordController.updateRecord(difficulty, currentTime);
+            }
+
         } else {
             stopTime();
             showAlert("Hmm!!!", "Sudoku is incorrect, try again.");
@@ -195,9 +213,9 @@ public class SudokuController {
         String selectedDifficulty = cb_difficulty.getValue();
         switch (selectedDifficulty) {
             case "Medium":
-                return 45;
+                return 40;
             case "Hard":
-                return 60;
+                return 50;
             default:
                 return 30;
         }
