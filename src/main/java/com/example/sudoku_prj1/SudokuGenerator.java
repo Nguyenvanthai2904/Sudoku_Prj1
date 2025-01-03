@@ -20,9 +20,6 @@ public class SudokuGenerator {
     }
 
 
-
-
-
     private boolean fillBoardRandom(int row, int col) {
         if (row == 9) {
             return true;

@@ -14,27 +14,6 @@ public class Sudoku {
         return board;
     }
 
-//    public boolean isValid(int row, int col, int num) {
-//        // Kiểm tra hàng và cột
-//        for (int i = 0; i < 9; i++) {
-//            if (board[row][i] == num || board[i][col] == num) {
-//                return false;
-//            }
-//        }
-//
-//        // Kiểm tra ô 3x3
-//        int startRow = row - row % 3;
-//        int startCol = col - col % 3;
-//        for (int i = startRow; i < startRow + 3; i++) {
-//            for (int j = startCol; j < startCol + 3; j++) {
-//                if (board[i][j] == num) {
-//                    return false;
-//                }
-//            }
-//        }
-//
-//        return true;
-//    }
 
     private boolean isValid(int row, int col, int num) {
         for (int i = 0; i < 9; i++) {

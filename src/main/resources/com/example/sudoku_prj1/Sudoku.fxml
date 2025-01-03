@@ -369,7 +369,7 @@
       </GridPane>
       <Label layoutX="140.0" layoutY="565.0" text="Difficulty:" textFill="WHITE">
          <font>
-            <Font name="JetBrains Mono Medium" size="18.0" />
+            <Font name="JetBrains Mono Medium" size="17.0" />
          </font>
       </Label>
       <ComboBox fx:id="cb_difficulty" layoutX="260.0" layoutY="562.0" prefHeight="36.0" prefWidth="130.0" visibleRowCount="3" />

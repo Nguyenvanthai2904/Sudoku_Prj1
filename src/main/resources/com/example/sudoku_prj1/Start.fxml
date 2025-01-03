@@ -11,12 +11,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #36399a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku_prj1.Main">
    <children>
-      <Button fx:id="btn_batdauchoi" layoutX="247.0" layoutY="230.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Bắt đầu chơi" textFill="WHITE">
+      <Button fx:id="btn_batdauchoi" layoutX="247.0" layoutY="230.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Start" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="350.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Hướng dẫn" textFill="WHITE">
+      <Button fx:id="btn_huongdan" layoutX="247.0" layoutY="350.0" mnemonicParsing="false" onAction="#onGuideButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Guide" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
@@ -87,7 +87,7 @@
             <Image url="@img_5.png" />
          </image>
       </ImageView>
-      <Button fx:id="btn_kyluc" layoutX="247.0" layoutY="290.0" mnemonicParsing="false" onAction="#onRecordButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Kỷ lục" textFill="WHITE">
+      <Button fx:id="btn_kyluc" layoutX="247.0" layoutY="290.0" mnemonicParsing="false" onAction="#onRecordButtonClick" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 20;" text="Record" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="16.0" />
          </font>
