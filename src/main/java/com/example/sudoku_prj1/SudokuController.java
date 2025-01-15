@@ -4,6 +4,7 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -12,7 +13,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -139,13 +145,20 @@ public class SudokuController {
         loadInputToBoard();
         if (sudoku.checkResult()) {
             stopTime();
-            showAlert("Congratulations", "Sudoku is correct! Your time: " + lb_time.getText());
+            String timeResult = lb_time.getText(); // Lưu thời gian để sử dụng sau
 
+            // Kiểm tra và cập nhật kỷ lục trước khi hiển thị thông báo
+            boolean isNewRecord = false;
             if (recordController != null) {
                 String difficulty = cb_difficulty.getValue();
-                String currentTime = lb_time.getText();
-                recordController.updateRecord(difficulty, currentTime);
+                isNewRecord = recordController.updateRecord(difficulty, timeResult); // Hàm trả về true nếu là kỷ lục mới
             }
+
+            String message = "Sudoku is correct! Your time: " + timeResult;
+            if (isNewRecord) {
+                message += "\nNew Record!"; // Thêm thông báo kỷ lục mới
+            }
+            showAlert("Congratulations", message);
 
         } else {
             stopTime();
@@ -198,24 +211,6 @@ public class SudokuController {
         }
 
         updateTextFieldsFromBoard();
-//        for (int row = 0; row < 9; row++) {
-//            for (int col = 0; col < 9; col++) {
-//                String id = "tf" + row + col;
-//                TextField textField = textFieldMap.get(id);
-//                if(initialBoard[row][col] == 0){
-//                    textField.setOnMousePressed(event -> highlightSameValueCells(textField));
-//                    textField.setOnMouseReleased(event ->highlightSameValueCells(textField));
-//
-//                    textField.textProperty().addListener((observable, oldValue, newValue) -> {
-//                        if (!newValue.matches("\\d*")) {
-//                            textField.setText(newValue.replaceAll("[^\\d]", ""));
-//                        }
-//                        if(newValue.length() > 1)
-//                            textField.setText(newValue.substring(newValue.length() - 1));
-//                    });
-//                }
-//            }
-//        }
         resetTime();
         startTime();
     }
@@ -272,7 +267,7 @@ public class SudokuController {
 
 
     private void highlightSameValueCells(TextField clickedField) {
-        String highlightStyle = "-fx-background-color: #FFEB3B; -fx-text-fill: black;";
+        String highlightStyle = "-fx-background-color: rgba(255,235,59,1); -fx-text-fill: black;";
         String defaultStyle = "-fx-text-fill: black;"; // Màu chữ đen cho ô không cố định
 
         // Reset tất cả highlight trước
@@ -320,6 +315,40 @@ public class SudokuController {
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(content);
+
+        Stage overlayStage = new Stage();
+        overlayStage.initOwner(gridPane.getScene().getWindow()); // Đặt Stage cha
+        overlayStage.initModality(Modality.APPLICATION_MODAL); // Chặn tương tác với cửa sổ chính
+        overlayStage.initStyle(StageStyle.TRANSPARENT); // Loại bỏ viền cửa sổ
+
+        // Tạo StackPane cho overlay Stage
+        StackPane overlayPane = new StackPane();
+
+        // Tạo Rectangle cho lớp phủ mờ
+        Rectangle overlay = new Rectangle(gridPane.getWidth(), gridPane.getHeight());
+        overlay.setFill(Color.rgb(255, 235, 59, 1));
+
+        //Thêm lớp phủ vào overlayPane
+        overlayPane.getChildren().add(overlay);
+
+        // Đặt Scene cho overlay Stage
+        Scene overlayScene = new Scene(overlayPane);
+        overlayScene.setFill(Color.TRANSPARENT); // Làm cho Scene trong suốt
+        overlayStage.setScene(overlayScene);
+
+        Bounds gridPaneBounds = gridPane.localToScreen(gridPane.getBoundsInLocal());
+        // Đặt kích thước và vị trí cho overlay Stage
+        overlayStage.setWidth(gridPane.getWidth());
+        overlayStage.setHeight(gridPane.getHeight());
+        overlayStage.setX(gridPaneBounds.getMinX()); // cộng thêm layoutX
+        overlayStage.setY(gridPaneBounds.getMinY());
+
+
+        // Hiển thị overlay Stage và Alert
+        overlayStage.show();
         alert.showAndWait();
+
+        // Đóng overlay Stage sau khi đóng Alert
+        overlayStage.close();
     }
 }

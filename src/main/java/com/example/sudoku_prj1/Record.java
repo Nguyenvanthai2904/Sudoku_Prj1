@@ -51,13 +51,15 @@ public class Record {
         }
     }
 
-    public void updateRecord(String difficulty, String time) {
+    public boolean updateRecord(String difficulty, String time) {
         String existingRecord = records.getOrDefault(difficulty, "99:99");
         if (compareTime(time, existingRecord) < 0) {
             records.put(difficulty, time);
             updateLabels();
             saveRecords();
+            return true; // Trả về true nếu là kỷ lục mới
         }
+        return false; // Trả về false nếu không phải kỷ lục mới
     }
 
     private void updateLabels() {
