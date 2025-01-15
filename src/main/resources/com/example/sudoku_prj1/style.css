@@ -1,0 +1,19 @@
+.my-text-field {
+    -fx-background-color: white;
+    -fx-border-color: #aeaeeb;
+    -fx-border-width: 0.3px;
+    -fx-border-style: solid;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: gray;
+    -fx-background-radius: 0;
+}
+
+/* Thêm các class mới cho viền dày hơn */
+.border-right {
+    -fx-border-width: 0.5px 1.8px 0.5px 0.5px; /* Phải dày hơn */
+}
+
+.border-bottom {
+    -fx-border-width: 0.5px 0.5px 1px 0.5px; /* Dưới dày hơn */
+}
+
