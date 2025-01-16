@@ -28,10 +28,6 @@ public class Main extends Application {
 
     public void onStartButtonClick(ActionEvent actionEvent) {
         try {
-            FXMLLoader recordLoader = new FXMLLoader(Main.class.getResource("Record.fxml"));
-            recordLoader.load();
-            Record recordController = recordLoader.getController();
-
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Sudoku.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 650, 650);
             Stage stage = new Stage();

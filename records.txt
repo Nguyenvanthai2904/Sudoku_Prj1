@@ -1,2 +1,2 @@
-Easy,00:01
-Medium,00:04
+Easy,04:16
+Hard,00:03

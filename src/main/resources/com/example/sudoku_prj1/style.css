@@ -8,12 +8,12 @@
     -fx-background-radius: 0;
 }
 
-/* Thêm các class mới cho viền dày hơn */
+
 .border-right {
-    -fx-border-width: 0.5px 1.8px 0.5px 0.5px; /* Phải dày hơn */
+    -fx-border-width: 0.5px 1.8px 0.5px 0.5px;
 }
 
 .border-bottom {
-    -fx-border-width: 0.5px 0.5px 1px 0.5px; /* Dưới dày hơn */
+    -fx-border-width: 0.5px 0.5px 1px 0.5px;
 }
 

@@ -43,10 +43,6 @@ public class SudokuController {
     private boolean timeRun;
     private Record recordController;
 
-    public void setRecordController(Record controller) {
-        this.recordController = controller;
-    }
-
     @FXML
     public void initialize() {
         cb_difficulty.setValue("Easy");
@@ -115,9 +111,9 @@ public class SudokuController {
             @Override
             public void handle(long now) {
                 if (timeRun) {
-                    long elapsedSeconds = (now - startTime) / 1_000_000_000;
-                    long minutes = minutes_pause + elapsedSeconds / 60;
-                    long seconds = seconds_pause + elapsedSeconds % 60;
+                    long timeCurrent = (now - startTime) / 1_000_000_000;
+                    long minutes = minutes_pause + timeCurrent / 60;
+                    long seconds = seconds_pause + timeCurrent % 60;
                     lb_time.setText(String.format("%02d:%02d", minutes, seconds));
                 }
             }
@@ -145,7 +141,7 @@ public class SudokuController {
         loadInputToBoard();
         if (sudoku.checkResult()) {
             stopTime();
-            String timeResult = lb_time.getText(); // Lưu thời gian để sử dụng sau
+            String timeResult = lb_time.getText();
 
             // Kiểm tra và cập nhật kỷ lục trước khi hiển thị thông báo
             boolean isNewRecord = false;
@@ -241,42 +237,36 @@ public class SudokuController {
                 } else {
                     textField.setText(board[row][col] == 0 ? "" : String.valueOf(board[row][col]));
                     textField.setEditable(true);
-                    textField.setStyle("-fx-text-fill: #0288D1;");
 
-                    // Listener để lắng nghe thay đổi giá trị
+                    // listener để lắng nghe thay đổi giá trị
                     textField.textProperty().addListener((observable, oldValue, newValue) -> {
-                        if (!newValue.matches("\\d*")) {
-                            textField.setText(newValue.replaceAll("[^\\d]", "")); // Loại bỏ ký tự không phải số
+                        if (!newValue.matches("[1-9]")) {
+                            textField.setText(oldValue); // nếu không khớp, giữ nguyên giá trị cũ
+                        } if (newValue.length() > 1) {
+                            textField.setText(newValue.substring(newValue.length() - 1));  //chỉ giữ 1 ký tự
+                        } else {
+                            highlightSameValueCells(textField); // nếu là số hợp lệ, tô sáng
                         }
-                        if (newValue.length() > 1) {
-                            textField.setText(newValue.substring(newValue.length() - 1)); // Chỉ giữ 1 ký tự
-                        }
-
-                        // Gọi highlight các ô cùng giá trị sau khi nhập liệu
-                        highlightSameValueCells(textField);
-
                     });
 
                     textField.focusedProperty().addListener((observable, oldValue, newValue) -> {
-                        highlightSameValueCells(textField); // Gọi highlight sau khi nhập hoặc thay đổi focus
+                        highlightSameValueCells(textField); // gọi highlight sau khi nhập hoặc thay đổi focus
                     });
                 }
             }
         }
     }
 
-
     private void highlightSameValueCells(TextField clickedField) {
         String highlightStyle = "-fx-background-color: rgba(255,235,59,1); -fx-text-fill: black;";
-        String defaultStyle = "-fx-text-fill: black;"; // Màu chữ đen cho ô không cố định
 
-        // Reset tất cả highlight trước
+        // reset tất cả highlight trước
         resetAllHighlights();
 
-        // Lấy giá trị trong ô hiện tại
+        // lấy giá trị trong ô hiện tại
         String clickedValue = clickedField.getText().trim();
 
-        // Chỉ highlight nếu ô đang được focus và có giá trị
+        //  highlight nếu ô đang được focus và có giá trị
         if (clickedField.isFocused() && !clickedValue.isEmpty()) {
             for (int row = 0; row < 9; row++) {
                 for (int col = 0; col < 9; col++) {
@@ -316,35 +306,25 @@ public class SudokuController {
         alert.setHeaderText(null);
         alert.setContentText(content);
 
-        Stage overlayStage = new Stage();
-        overlayStage.initOwner(gridPane.getScene().getWindow()); // Đặt Stage cha
-        overlayStage.initModality(Modality.APPLICATION_MODAL); // Chặn tương tác với cửa sổ chính
-        overlayStage.initStyle(StageStyle.TRANSPARENT); // Loại bỏ viền cửa sổ
+        Stage overlayStage = new Stage(); //tạo stage mới
+        overlayStage.initOwner(gridPane.getScene().getWindow()); //lay cửa sổ chứa gridpane, đặt làm cửa sổ cha
+        overlayStage.initModality(Modality.APPLICATION_MODAL); //khi overlay hien thi, người dùng không tương tác được
+        overlayStage.initStyle(StageStyle.TRANSPARENT); //loại ổ vien va thanh tieu de cua cua so
 
-        // Tạo StackPane cho overlay Stage
-        StackPane overlayPane = new StackPane();
-
-        // Tạo Rectangle cho lớp phủ mờ
+        StackPane overlayPane = new StackPane(); //chứa rectangle
         Rectangle overlay = new Rectangle(gridPane.getWidth(), gridPane.getHeight());
-        overlay.setFill(Color.rgb(255, 235, 59, 1));
-
-        //Thêm lớp phủ vào overlayPane
+        overlay.setFill(Color.rgb(255, 235, 59, 1)); //  đặt màu cho Rectangle
         overlayPane.getChildren().add(overlay);
 
-        // Đặt Scene cho overlay Stage
         Scene overlayScene = new Scene(overlayPane);
-        overlayScene.setFill(Color.TRANSPARENT); // Làm cho Scene trong suốt
         overlayStage.setScene(overlayScene);
 
-        Bounds gridPaneBounds = gridPane.localToScreen(gridPane.getBoundsInLocal());
-        // Đặt kích thước và vị trí cho overlay Stage
+        Bounds gridPaneBounds = gridPane.localToScreen(gridPane.getBoundsInLocal()); //lấy tọa độ, kích thuoc cua gridpane
         overlayStage.setWidth(gridPane.getWidth());
         overlayStage.setHeight(gridPane.getHeight());
-        overlayStage.setX(gridPaneBounds.getMinX()); // cộng thêm layoutX
+        overlayStage.setX(gridPaneBounds.getMinX());
         overlayStage.setY(gridPaneBounds.getMinY());
 
-
-        // Hiển thị overlay Stage và Alert
         overlayStage.show();
         alert.showAndWait();
 
