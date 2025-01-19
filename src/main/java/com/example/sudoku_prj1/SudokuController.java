@@ -63,7 +63,7 @@ public class SudokuController {
         cb_difficulty.setOnAction(this::onDifficultySelected);
         try {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("Record.fxml"));
-            loader.load(); // Load the FXML to ensure the controller is created
+            loader.load(); //khởi tạo một instance của controller class
             recordController = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
@@ -75,9 +75,9 @@ public class SudokuController {
             @Override
             public void handle(long now) {
                 if (timeRun) {
-                    long elapsedSeconds = (now - startTime) / 1_000_000_000;
-                    long minutes = elapsedSeconds / 60;
-                    long seconds = elapsedSeconds % 60;
+                    long timeCurrent = (now - startTime) / 1_000_000_000;
+                    long minutes = timeCurrent / 60;
+                    long seconds = timeCurrent % 60;
                     lb_time.setText(String.format("%02d:%02d", minutes, seconds));
                 }
             }
@@ -185,7 +185,6 @@ public class SudokuController {
             }
         }
     }
-
     public void onSolveImgClick(MouseEvent mouseEvent) {
         sudoku.solve();
         stopTime();
@@ -281,8 +280,8 @@ public class SudokuController {
     }
 
     private void resetAllHighlights() {
-        String defaultStyle = "-fx-text-fill: black;"; // Màu chữ đen cho ô không cố định
-        String fixedStyle = "-fx-background-color: #EEEEEE; -fx-text-fill: #0288D1;"; // Style cho ô cố định
+        String defaultStyle = "-fx-text-fill: black;"; // màu chữ đen cho ô không cố định
+        String fixedStyle = "-fx-background-color: #EEEEEE; -fx-text-fill: #0288D1;"; // style cho ô cố định
 
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
@@ -290,9 +289,9 @@ public class SudokuController {
                 TextField textField = textFieldMap.get(id);
                 if (textField != null) {
                     if (initialBoard[row][col] == 0) {
-                        textField.setStyle(defaultStyle); // Reset style cho ô không cố định
+                        textField.setStyle(defaultStyle); // reset style cho ô không cố định
                     } else {
-                        textField.setStyle(fixedStyle); // Giữ style cho ô cố định
+                        textField.setStyle(fixedStyle); // giữ style cho ô cố định
                     }
                 }
             }
